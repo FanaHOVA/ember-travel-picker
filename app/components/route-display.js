@@ -4,29 +4,17 @@ export default Ember.Component.extend({
   didReceiveAttrs() {
     var _this = this;
     var classes_json = this.get('classes');
-    var agency = this.get('agency');
 
-    if (agency == 'trenitalia') {
-      var isItalo = false;
-
-      var seconda = classes_json[0]['fares'],
-          prima = classes_json[1]['fares'],
-          business = classes_json[2]['fares'],
-          club = classes_json[3]['fares'],
-          smart = [],
-          smartXL = [];
-    } else {
-      var isItalo = true;
-
-      var smart = classes_json[0]['fares'],
-          smartXL = classes_json[1]['fares'],
-          business = classes_json[2]['fares'],
-          club = classes_json[3]['fares'],
-          seconda = [],
-          prima = [];
-    }
+    var seconda = classes_json[0]['fares'],
+        prima = classes_json[1]['fares'],
+        business = classes_json[2]['fares'],
+        club = classes_json[3]['fares'];
 
     seconda.forEach(function(entry) {
+      if (entry['name'] == 'Low Cost') {
+        entry['name'] = 'SuperEconomy'
+      }
+
       let fare = 'seconda' + entry['name'];
       if (entry['price']){
           _this.set(fare, entry['price']['amount']);
@@ -36,6 +24,10 @@ export default Ember.Component.extend({
     });
 
     prima.forEach(function(entry) {
+      if (entry['name'] == 'Low Cost') {
+        entry['name'] = 'SuperEconomy'
+      }
+
       let fare = 'prima' + entry['name'];
       if (entry['price']){
           _this.set(fare, entry['price']['amount']);
@@ -45,6 +37,10 @@ export default Ember.Component.extend({
     });
 
     business.forEach(function(entry) {
+      if (entry['name'] == 'Low Cost') {
+        entry['name'] = 'SuperEconomy'
+      }
+
       let fare = 'business' + entry['name'];
       if (entry['price']){
           _this.set(fare, entry['price']['amount']);
@@ -54,25 +50,11 @@ export default Ember.Component.extend({
     });
 
     club.forEach(function(entry) {
+      if (entry['name'] == 'Low Cost') {
+        entry['name'] = 'SuperEconomy'
+      }
+      
       let fare = 'club' + entry['name'];
-      if (entry['price']){
-          _this.set(fare, entry['price']['amount']);
-      } else {
-          _this.set(fare, '-');
-      }
-    });
-
-    smart.forEach(function(entry) {
-      let fare = 'smart' + entry['name'];
-      if (entry['price']){
-          _this.set(fare, entry['price']['amount']);
-      } else {
-          _this.set(fare, '-');
-      }
-    });
-
-    smartXL.forEach(function(entry) {
-      let fare = 'smartXL' + entry['name'];
       if (entry['price']){
           _this.set(fare, entry['price']['amount']);
       } else {
