@@ -30,14 +30,102 @@
     </div>
     <div class='col-md-2 price-wrap'>
       <div class="fare-price">
-        <strong>€
-          <span class='minimum-price'>{{wholePrice}}</span><span class='decimal-price'>.00</span></strong>
+        {{camel-price price=wholePrice}}
           <p class='per-adult'>
             per adult
           </p>
       </div>
     </div>
     <div class='col-md-2 button-wrap'>
-        <button type="button" class="btn btn-primary">Seleziona</button>
+        <button {{action "showPrices"}} type="button" class="btn {{if pricesAreHidden 'btn-primary'}} {{unless pricesAreHidden 'btn-default'}}">Seleziona</button>
+    </div>
+    <div class='col-md-12'>
+      <hr>
+    </div>
+    <div class='col-md-12 {{if pricesAreHidden "hidden-prices"}}' style='margin-bottom: 15px'>
+      <div class='pricing-table' style='width: 70%; float: left'>
+        <table style='padding: 15px'>
+          <tr>
+            <td></td>
+            <td>Seconda</td>
+            <td>Prima</td>
+            <td>Business</td>
+            <td>Club</td>
+          </tr>
+          <tr>
+            <td style='text-align: right'>Super Economy</td>
+            <td>
+              <!-- Appendo il codice del treno all'id dell'elemento per renderlo unico -->
+              <button id={{concat 'secondaSuperEconomy' number}} {{action "selectPrice" (concat 'secondaSuperEconomy' number)}} class='pricing-box'>
+                  {{price-box price=secondaSuperEconomy}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'primaSuperEconomy' number}} {{action "selectPrice" (concat 'primaSuperEconomy' number)}} class='pricing-box'>
+                  {{price-box price=primaSuperEconomy}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'businessSuperEconomy' number}} {{action "selectPrice" (concat 'businessSuperEconomy' number)}} class='pricing-box'>
+                {{price-box price=businessSuperEconomy}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'clubSuperEconomy' number}} {{action "selectPrice" (concat 'clubSuperEconomy' number)}} class='pricing-box'>
+                {{price-box price=clubSuperEconomy}}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td style='text-align: right'>Standard</td>
+            <td>
+              <button id={{concat 'secondaStandard' number}} {{action "selectPrice" (concat 'secondaStandard' number)}} class='pricing-box'>
+                {{price-box price=secondaStandard}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'primaStandard' number}} {{action "selectPrice" (concat 'primaStandard' number)}} class='pricing-box'>
+                {{price-box price=primaStandard}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'businessStandard' number}} {{action "selectPrice" (concat 'businessStandard' number)}} class='pricing-box'>
+                {{price-box price=businessStandard}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'clubStandard' number}} {{action "selectPrice" (concat 'clubStandard' number)}} class='pricing-box'>
+                {{price-box price=clubStandard}}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td style='text-align: right'>Flex</td>
+            <td>
+              <button id={{concat 'secondaFlex' number}} {{action "selectPrice" (concat 'secondaFlex' number)}} class='pricing-box'>
+                {{price-box price=secondaFlex}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'primaFlex' number}} {{action "selectPrice" (concat 'primaFlex' number)}} class='pricing-box'>
+                {{price-box price=primaFlex}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'businessFlex' number}} {{action "selectPrice" (concat 'businessFlex' number)}} class='pricing-box'>
+                {{price-box price=businessFlex}}
+              </button>
+            </td>
+            <td>
+              <button id={{concat 'clubFlex' number}} {{action "selectPrice" (concat 'clubFlex' number)}} class='pricing-box'>
+                {{price-box price=clubFlex}}
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div style='width: 30%; float: right'>
+        <button {{action "confirmTrip"}} class='btn btn-checkout'>Continua</button>
+      </div>
     </div>
 </div>

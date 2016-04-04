@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   className: 'route-display',
+  pricesAreHidden: true,
+  previousClick: '#clear',
 
   didReceiveAttrs() {
     var _this = this;
@@ -73,5 +75,38 @@ export default Ember.Component.extend({
           _this.set(fare, '-');
       }
     });
+  },
+
+  actions: {
+      showPrices() {
+        this.toggleProperty('pricesAreHidden');
+      },
+      selectPrice(fare) {
+        let previous = this.get('previousClick'),
+            selector = '#' + fare,
+            price = this.get(fare.slice(0, -4)); // Rimuovo il codice treno per trovare il costo
+
+        $(selector).removeClass('pricing-box');
+        $(selector).addClass('selected-box');
+        this.set('wholePrice', price);
+
+        if (previous != selector) {
+          $(previous).removeClass('selected-box');
+          $(previous).addClass('pricing-box');
+        }
+
+        this.set('previousClick', selector);
+      },
+      confirmTrip() {
+        let data = {
+          logo: this.get('logo'),
+          from: this.get('from'),
+          to: this.get('to'),
+          departureTime: this.get('departureTime'),
+          arrivalTime: this.get('arrivalTime'),
+          duration: this.get('formattedDuration')
+        }
+        this.sendAction('pickedTrip', data);
+      }
   }
 });
