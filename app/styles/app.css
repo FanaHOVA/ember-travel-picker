@@ -1,0 +1,131 @@
+.train-number {
+    text-transform: capitalize;
+    color: #7d7f83;
+}
+
+.agency-logo {
+  max-width: 100px;
+}
+
+.route-display {
+  width: 110%;
+  min-height: 100px;
+  border: 1px solid #d3d3d3;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.55);
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.55);
+}
+
+.agency-wrap {
+    padding: 40px;
+}
+
+.trip-info-wrap {
+    padding: 20px;
+}
+
+.vertical-selector {
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: 327px;
+    list-style: none;
+}
+
+.circle {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 4px solid #f63;
+  border-radius: 6px;
+  margin-right: 11px;
+  z-index: 1;
+  display: inline-block;
+}
+
+.origin-info {
+    padding-bottom: 5px;
+}
+
+.trip-length-info {
+    padding-bottom: 5px;
+}
+
+.trip-length {
+    font-size: 12px;
+    padding: 10px;
+    color: #7d7f83;
+    margin-right: 20px;
+}
+
+.origin-info::after {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  top: 4px;
+  left: 101px;
+  background: #f63;
+  z-index: 0;
+}
+
+.origin-time {
+    width: 70px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #2b333b;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.fare-price {
+  font-size: 18px;
+  padding-left: 15px;
+  font-family: "Oswald",Helvetica,Arial,sans-serif;
+  text-align: center;
+  width: 110px;
+}
+
+.minimum-price {
+    font-size: 30px;
+    color: #2b333b;
+    font-family: "Oswald",Helvetica,Arial,sans-serif;
+    text-align: center;
+    width: 110px;
+}
+
+.decimal-price {
+  font-size: 18px;
+}
+
+.price-wrap {
+  padding-top: 30px;
+}
+
+.button-wrap {
+  padding-top: 40px;
+}
+
+.per-adult {
+  color: #8a8a8a;
+  font-size: 13px;
+  padding-left: 15px;
+  margin-top: -8px;
+}
+
+.btn-primary {
+    border-radius: 0px;
+    background-color: #06aeed !important;
+    border-color: #06aeed !important;
+    -webkit-box-shadow: 0px 3px 0px #008fc5;
+    -moz-box-shadow:    0px 3px 0px #008fc5;
+    box-shadow:         0px 3px 0px #008fc5;
+}
+
+.btn-primary:active {
+    margin-top: 3px;
+    margin-bottom: -3px;
+}

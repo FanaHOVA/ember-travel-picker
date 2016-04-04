@@ -1,3 +1,20 @@
-{{#each model as |route|}}
-    {{route-display agency=route.agency classes=route.classes}}
-{{/each}}
+<div class='fluid-container'>
+  <div class='row'>
+    <div class='col-md-8'>
+      {{#each model as |route|}}
+          {{route-display agency=route.agency
+                          classes=route.classes
+                          number=route.number
+                          from=route.from
+                          to=route.to
+                          departureTime=route.departureTime
+                          arrivalTime=route.arrivalTime
+                          duration=route.duration
+                          }}
+      {{/each}}
+    </div>
+    <div class='col-md-8'>
+      <!-- Checkout here -->
+    </div>
+  </div>
+</div>

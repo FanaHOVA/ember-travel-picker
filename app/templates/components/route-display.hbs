@@ -1,5 +1,43 @@
-{{agency}}<br>
+<!-- <p class='train-number'>{{agency}} {{number}}</p> | {{formattedDuration}} {{moment-format departureTime 'hh:mm'}} {{moment-format arrivalTime 'hh:mm'}} <br>
 {{secondaSuperEconomy}} | {{secondaStandard}} | {{secondaFlex}} <br>
 {{primaSuperEconomy}} | {{primaStandard}} | {{primaFlex}} <br>
 {{businessSuperEconomy}} | {{businessStandard}} | {{businessFlex}} <br>
 {{clubSuperEconomy}} | {{clubStandard}} | {{clubFlex}} <br>
+{{minimumPrice}} -->
+
+<div class='route-display row vertical-center'>
+    <div class='col-md-3 agency-wrap'>
+        <img class='agency-logo ' src={{logo}}>
+    </div>
+    <div class='col-md-5 trip-info-wrap'>
+      <ul class="vertical-selector">
+        <li class="origin-info">
+          <span class="origin-time">{{moment-format departureTime 'hh:mm'}}</span>
+          <span class="circle"></span>
+          <span><strong>{{from}}</strong></span>
+        </li>
+        <li class="trip-length-info">
+          <span class="trip-length">{{formattedDuration}}</span>
+          <span class="train-number">{{agency}} {{number}}</span>
+        </li>
+        <li class="destination-info">
+          <span class="origin-time">{{moment-format arrivalTime 'hh:mm'}}</span>
+          <span class="circle"></span>
+          <span><strong>{{to}}</strong></span>
+        </li>
+      </ul>
+
+    </div>
+    <div class='col-md-2 price-wrap'>
+      <div class="fare-price">
+        <strong>€
+          <span class='minimum-price'>{{wholePrice}}</span><span class='decimal-price'>.00</span></strong>
+          <p class='per-adult'>
+            per adult
+          </p>
+      </div>
+    </div>
+    <div class='col-md-2 button-wrap'>
+        <button type="button" class="btn btn-primary">Seleziona</button>
+    </div>
+</div>
