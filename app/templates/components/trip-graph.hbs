@@ -1,7 +1,7 @@
 <ul class="vertical-selector">
-  <li class="origin-info">
+  <li class="{{concat agency '-origin-info'}}">
     <span class="origin-time">{{moment-format departureTime 'hh:mm'}}</span>
-    <span class="circle"></span>
+    <span class="circle {{agency}}"></span>
     <span><strong>{{from}}</strong></span>
   </li>
   <li class="trip-length-info">
@@ -10,7 +10,7 @@
   </li>
   <li class="destination-info">
     <span class="origin-time">{{moment-format arrivalTime 'hh:mm'}}</span>
-    <span class="circle"></span>
+    <span class="circle {{agency}}"></span>
     <span><strong>{{to}}</strong></span>
   </li>
 </ul>

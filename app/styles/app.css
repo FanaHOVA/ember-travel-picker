@@ -1,223 +1,195 @@
 hr {
-  margin-top: 0px !important;
-}
+  margin-top: 0px !important; }
 
 .panel {
   margin: 20px;
   max-width: 70%;
-  border-radius: 0px;
-}
-
-.panel-heading {
-  background-color: white !important;
-}
-
-.panel-title {
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
-.checkout-trip-info {
-  margin-left: -50px ;
-  margin-top: 10px;
-  padding: 0px !important;
-}
+  border-radius: 0px; }
+  .panel .heading {
+    background-color: white; }
+  .panel .panel-title {
+    text-transform: uppercase;
+    font-size: 12px; }
+  .panel .checkout-trip-info {
+    margin-left: -50px;
+    margin-top: 10px;
+    padding: 0px !important; }
 
 .train-number {
-    text-transform: capitalize;
-    color: #7d7f83;
-}
+  font-family: HelveticaNeue;
+  text-transform: capitalize;
+  color: #888888; }
 
 .agency-logo {
-  max-width: 100px;
-}
+  width: 95px;
+  height: 23px; }
 
 .route-display {
+  width: 748px;
   min-height: 100px;
-  border: 1px solid #d3d3d3;
   margin: 20px;
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.55);
-  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.55);
-  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.55);
-}
-
-.agency-wrap {
-    padding: 40px;
-}
-
-.trip-info-wrap {
-    padding: 20px;
-}
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px #cbcbcb; }
+  .route-display .agency-wrap {
+    padding-left: 27px;
+    padding-top: 40px; }
+  .route-display .trip-info-wrap {
+    padding-top: 20px;
+    padding-left: 45px; }
+  .route-display .price-wrap {
+    padding-top: 30px; }
+  .route-display .button-wrap {
+    padding-top: 35px; }
 
 .vertical-selector {
-    float: left;
-    position: relative;
-    display: inline-block;
-    width: 327px;
-    list-style: none;
-}
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 327px;
+  list-style: none; }
+  .vertical-selector li {
+    padding-bottom: 5px; }
 
 .circle {
   position: relative;
   width: 12px;
   height: 12px;
   background: #fff;
-  border: 4px solid #f63;
   border-radius: 6px;
   margin-right: 11px;
   z-index: 1;
-  display: inline-block;
-}
+  display: inline-block; }
 
-.origin-info {
-    padding-bottom: 5px;
-}
+.trenitalia {
+  border: solid 4px #006367; }
 
-.trip-length-info {
-    padding-bottom: 5px;
-}
+.italotreno {
+  border: solid 4px #b11e08; }
 
 .trip-length {
-    font-size: 12px;
-    padding: 10px;
-    color: #7d7f83;
-    margin-right: 20px;
-}
+  font-size: 12px;
+  padding: 10px;
+  color: #7d7f83;
+  margin-right: 20px; }
 
-.origin-info::after {
+.trenitalia-origin-info::after {
   content: '';
   position: absolute;
   height: 80%;
   width: 4px;
   top: 4px;
   left: 101px;
-  background: #f63;
-  z-index: 0;
-}
+  background: #006367;
+  z-index: 0; }
+
+.italotreno-origin-info::after {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  top: 4px;
+  left: 101px;
+  background: #b11e08;
+  z-index: 0; }
 
 .origin-time {
-    width: 70px;
-    margin-left: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: #2b333b;
-    font-weight: 700;
-    margin-right: 8px;
-}
+  width: 70px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #2b333b;
+  font-weight: 700;
+  margin-right: 8px; }
 
 .fare-price {
   font-size: 18px;
   padding-left: 15px;
-  font-family: "Oswald",Helvetica,Arial,sans-serif;
+  font-family: Oswald-Regular, Helvetica, Arial, sans-serif;
   text-align: center;
-  width: 110px;
-}
+  width: 110px; }
+  .fare-price p {
+    color: #9b9b9b;
+    font-size: 12px;
+    padding-left: 15px;
+    margin-top: -8px; }
 
 .minimum-price {
-    font-size: 27px;
-    color: #2b333b;
-    font-family: "Oswald",Helvetica,Arial,sans-serif;
-    text-align: center;
-    width: 110px;
-}
+  font-size: 27px;
+  color: #2b333b;
+  font-family: Oswald-Regular, Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 110px; }
 
 .decimal-price {
-  font-size: 18px;
-}
-
-.price-wrap {
-  padding-top: 30px;
-}
-
-.button-wrap {
-  padding-top: 35px;
-}
-
-.per-adult {
-  color: #8a8a8a;
-  font-size: 13px;
-  padding-left: 15px;
-  margin-top: -8px;
-}
+  font-size: 18px; }
 
 .btn-primary {
-    border-radius: 0px;
-    background-color: #06aeed !important;
-    border-color: #06aeed !important;
-    -webkit-box-shadow: 0px 3px 0px #008fc5;
-    -moz-box-shadow:    0px 3px 0px #008fc5;
-    box-shadow:         0px 3px 0px #008fc5;
-}
+  border-radius: 2px;
+  border: 0px;
+  background-color: #06aeed;
+  box-shadow: 0 3px 0 0 #008fc5; }
 
 .btn-success {
-    border-radius: 0px;
-    background-color: #8cdc31 !important;
-    border-color: #8cdc31 !important;
-    -webkit-box-shadow: 0px 3px 0px #7ec133;
-    -moz-box-shadow:    0px 3px 0px #7ec133;
-    box-shadow:         0px 3px 0px #7ec133;
-}
+  border-radius: 0px;
+  background-color: #8cdc31 !important;
+  border-color: #8cdc31 !important;
+  -webkit-box-shadow: 0px 3px 0px #7ec133;
+  -moz-box-shadow: 0px 3px 0px #7ec133;
+  box-shadow: 0px 3px 0px #7ec133; }
 
 .btn-default {
   border-radius: 0px;
-  font-color: white;
-}
+  font-color: white; }
 
 .btn-primary:active,
 .btn-default:active,
 .btn-checkout:active {
-    margin-top: 3px;
-    margin-bottom: -3px;
-    font-color: white;
-}
+  margin-top: 3px;
+  margin-bottom: -3px;
+  font-color: white; }
 
-.hidden-prices {
-  display: none;
-}
+.hidden {
+  display: none; }
 
 .pricing-box {
   border: 0px;
   width: 80px;
   height: 40px;
   background-color: #ececec;
-  text-align: center;
-}
+  text-align: center; }
 
 .pricing-box-text {
   font-size: 19px;
-  line-height: 19px;
-}
+  line-height: 19px; }
 
 .selected-box {
   border: 1px solid #89b655;
   width: 80px;
   height: 40px;
   background-color: #c4f291;
-  text-align: center;
-}
+  text-align: center; }
 
 table, th, td {
-    border: 0px;
-    padding: 5px;
-    text-align: center;
-}
+  border: 0px;
+  padding: 5px;
+  text-align: center; }
+
 table {
-    border-spacing: 5px;
-}
+  border-spacing: 5px; }
 
 .btn {
-  font-size: 18px !important;
-}
+  font-size: 16px !important; }
 
 .btn-absolute {
-      position: absolute;
-    top: 130px;
-    right: 40px;
-}
+  position: absolute;
+  top: 130px;
+  right: 40px; }
 
 .btn-checkout {
   border-radius: 0px;
   background-color: #ff6633 !important;
   border-color: #ff6633 !important;
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=app.css.map */

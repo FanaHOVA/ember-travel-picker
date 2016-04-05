@@ -1,15 +1,8 @@
-<!-- <p class='train-number'>{{agency}} {{number}}</p> | {{formattedDuration}} {{moment-format departureTime 'hh:mm'}} {{moment-format arrivalTime 'hh:mm'}} <br>
-{{secondaSuperEconomy}} | {{secondaStandard}} | {{secondaFlex}} <br>
-{{primaSuperEconomy}} | {{primaStandard}} | {{primaFlex}} <br>
-{{businessSuperEconomy}} | {{businessStandard}} | {{businessFlex}} <br>
-{{clubSuperEconomy}} | {{clubStandard}} | {{clubFlex}} <br>
-{{minimumPrice}} -->
-
 <div class='route-display row vertical-center'>
-    <div class='col-md-3 agency-wrap'>
-        <img class='agency-logo ' src={{logo}}>
+    <div class='col-md-1 agency-wrap'>
+        <img class='agency-logo' src={{logo}}>
     </div>
-    <div class='col-md-5 trip-info-wrap'>
+    <div class='col-md-3 trip-info-wrap'>
       {{trip-graph departureTime=departureTime
                    arrivalTime=arrivalTime
                    from=from
@@ -18,21 +11,22 @@
                    agency=agency
                    number=number}}
     </div>
+    <div class='col-md-4'></div>
     <div class='col-md-2 price-wrap'>
       <div class="fare-price">
         {{camel-price price=wholePrice}}
-          <p class='per-adult'>
+          <p>
             per adult
           </p>
       </div>
     </div>
-    <div class='col-md-2 button-wrap'>
+    <div class='col-md-1 button-wrap'>
         <button {{action "showPrices"}} type="button" class="btn {{if tripIsSelected 'btn-success'}} {{if pricesAreHidden 'btn-primary'}} {{unless pricesAreHidden 'btn-default'}}">Seleziona</button>
     </div>
-    <div class='col-md-12 {{if pricesAreHidden "hidden-prices"}}'>
+    <div class='col-md-12 {{if pricesAreHidden "hidden"}}'>
       <hr>
     </div>
-    <div class='col-md-12 {{if pricesAreHidden "hidden-prices"}}' style='margin-bottom: 15px'>
+    <div class='col-md-12 {{if pricesAreHidden "hidden"}}' style='margin-bottom: 15px'>
       <div class='pricing-table' style='width: 70%; float: left'>
         <table style='padding: 15px'>
           <tr>
