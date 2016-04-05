@@ -8,7 +8,6 @@ export default Ember.Component.extend({
 
   didReceiveAttrs() {
     var _this = this;
-    var classes_json = this.get('classes');
     this.set('logo', 'http://alessiofanelli.com/wd/' + this.get('agency') + '.jpg');
     var minimum = null;
 
@@ -17,6 +16,7 @@ export default Ember.Component.extend({
         minutes = duration % 60;
     this.set('formattedDuration', hours + 'h ' + minutes + 'm');
 
+    let classes_json = this.get('classes');
     var seconda = classes_json[0]['fares'],
         prima = classes_json[1]['fares'],
         business = classes_json[2]['fares'],

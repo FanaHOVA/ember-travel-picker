@@ -199,6 +199,7 @@ hr {
 table, th, td {
     border: 0px;
     padding: 5px;
+    text-align: center;
 }
 table {
     border-spacing: 5px;

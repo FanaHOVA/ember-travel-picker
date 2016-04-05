@@ -1,3 +1,7 @@
-<button id={{concat fare number}} {{action "priceSelected" (concat fare number)}} class='pricing-box'>
-  {{price-box price=price}}
-</button>
+{{#if hasPrice}}
+  <button id={{concat fare number}} {{action "priceSelected" (concat fare number)}} class='pricing-box'>
+    <strong>€<span class='pricing-box-text'>{{price}}</span><span class='decimal-price' style='font-size: 13px'>.00</span></strong>
+  </button>
+{{else}}
+  <span class='pricing-box-text'>_</span>
+{{/if}}
