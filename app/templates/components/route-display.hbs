@@ -10,23 +10,13 @@
         <img class='agency-logo ' src={{logo}}>
     </div>
     <div class='col-md-5 trip-info-wrap'>
-      <ul class="vertical-selector">
-        <li class="origin-info">
-          <span class="origin-time">{{moment-format departureTime 'hh:mm'}}</span>
-          <span class="circle"></span>
-          <span><strong>{{from}}</strong></span>
-        </li>
-        <li class="trip-length-info">
-          <span class="trip-length">{{formattedDuration}}</span>
-          <span class="train-number">{{agency}} {{number}}</span>
-        </li>
-        <li class="destination-info">
-          <span class="origin-time">{{moment-format arrivalTime 'hh:mm'}}</span>
-          <span class="circle"></span>
-          <span><strong>{{to}}</strong></span>
-        </li>
-      </ul>
-
+      {{trip-graph departureTime=departureTime
+                   arrivalTime=arrivalTime
+                   from=from
+                   to=to
+                   formattedDuration=formattedDuration
+                   agency=agency
+                   number=number}}
     </div>
     <div class='col-md-2 price-wrap'>
       <div class="fare-price">
@@ -37,9 +27,9 @@
       </div>
     </div>
     <div class='col-md-2 button-wrap'>
-        <button {{action "showPrices"}} type="button" class="btn {{if pricesAreHidden 'btn-primary'}} {{unless pricesAreHidden 'btn-default'}}">Seleziona</button>
+        <button {{action "showPrices"}} type="button" class="btn {{if tripIsSelected 'btn-success'}} {{if pricesAreHidden 'btn-primary'}} {{unless pricesAreHidden 'btn-default'}}">Seleziona</button>
     </div>
-    <div class='col-md-12'>
+    <div class='col-md-12 {{if pricesAreHidden "hidden-prices"}}'>
       <hr>
     </div>
     <div class='col-md-12 {{if pricesAreHidden "hidden-prices"}}' style='margin-bottom: 15px'>
@@ -125,7 +115,7 @@
         </table>
       </div>
       <div style='width: 30%; float: right'>
-        <button {{action "confirmTrip"}} class='btn btn-checkout'>Continua</button>
+        <button {{action "confirmTrip"}} class='btn btn-checkout btn-absolute'>Continua</button>
       </div>
     </div>
 </div>

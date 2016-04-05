@@ -1,0 +1,16 @@
+<ul class="vertical-selector">
+  <li class="origin-info">
+    <span class="origin-time">{{moment-format departureTime 'hh:mm'}}</span>
+    <span class="circle"></span>
+    <span><strong>{{from}}</strong></span>
+  </li>
+  <li class="trip-length-info">
+    <span class="trip-length">{{formattedDuration}}</span>
+    <span class="train-number">{{agency}} {{number}}</span>
+  </li>
+  <li class="destination-info">
+    <span class="origin-time">{{moment-format arrivalTime 'hh:mm'}}</span>
+    <span class="circle"></span>
+    <span><strong>{{to}}</strong></span>
+  </li>
+</ul>

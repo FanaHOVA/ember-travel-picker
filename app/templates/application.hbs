@@ -14,8 +14,41 @@
                           }}
       {{/each}}
     </div>
-    <div class='col-md-8'>
-      <!-- Checkout here -->
+    <div class='col-md-4 {{unless checkoutActive 'hidden-prices'}}'>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Carrello</h3>
+        </div>
+        <div class="panel-body">
+          <div class='row'>
+            <div class='col-sm-6'>
+              <img class='agency-logo' src={{logo}}>
+            </div>
+            <div class='col-sm-6' style='text-align: right'>
+              {{camel-price price=price}}
+            </div>
+          </div>
+          <div class='row checkout-trip-info trip-info-wrap' style='padding: 0px;'>
+            {{trip-graph departureTime=departureTime
+                         arrivalTime=arrivalTime
+                         from=from
+                         to=to
+                         formattedDuration=duration
+                         agency=agency
+                         number=number}}
+          </div>
+        </div>
+        <div class='panel-footer'>
+          <div class='row'>
+              <div class='col-sm-7'>
+                {{camel-price price=price}}
+              </div>
+              <div class='col-sm-4'>
+                <button {{action "confirmTrip"}} class='btn btn-checkout'>Continua</button>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div id='clear' style='display: none'>

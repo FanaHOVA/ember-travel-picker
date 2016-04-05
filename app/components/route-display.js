@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   className: 'route-display',
   pricesAreHidden: true,
   previousClick: '#clear',
+  tripIsSelected: false,
 
   didReceiveAttrs() {
     var _this = this;
@@ -104,8 +105,11 @@ export default Ember.Component.extend({
           to: this.get('to'),
           departureTime: this.get('departureTime'),
           arrivalTime: this.get('arrivalTime'),
-          duration: this.get('formattedDuration')
+          duration: this.get('formattedDuration'),
+          price: this.get('wholePrice')
         }
+        this.toggleProperty('pricesAreHidden');
+        this.toggleProperty('tripIsSelected');
         this.sendAction('pickedTrip', data);
       }
   }
