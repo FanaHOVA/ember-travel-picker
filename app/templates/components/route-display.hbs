@@ -45,71 +45,82 @@
           <tr>
             <td style='text-align: right'>Super Economy</td>
             <td>
-              <!-- Appendo il codice del treno all'id dell'elemento per renderlo unico -->
-              <button id={{concat 'secondaSuperEconomy' number}} {{action "selectPrice" (concat 'secondaSuperEconomy' number)}} class='pricing-box'>
-                  {{price-box price=secondaSuperEconomy}}
-              </button>
+              {{price-select-button fare='secondaSuperEconomy'
+                                    price=secondaSuperEconomy
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'primaSuperEconomy' number}} {{action "selectPrice" (concat 'primaSuperEconomy' number)}} class='pricing-box'>
-                  {{price-box price=primaSuperEconomy}}
-              </button>
+              {{price-select-button fare='primaSuperEconomy'
+                                    price=primaSuperEconomy
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'businessSuperEconomy' number}} {{action "selectPrice" (concat 'businessSuperEconomy' number)}} class='pricing-box'>
-                {{price-box price=businessSuperEconomy}}
-              </button>
+              {{price-select-button fare='businessSuperEconomy'
+                                    price=businessSuperEconomy
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'clubSuperEconomy' number}} {{action "selectPrice" (concat 'clubSuperEconomy' number)}} class='pricing-box'>
-                {{price-box price=clubSuperEconomy}}
-              </button>
+              {{price-select-button fare='clubSuperEconomy'
+                                    price=clubSuperEconomy
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
           </tr>
           <tr>
             <td style='text-align: right'>Standard</td>
             <td>
-              <button id={{concat 'secondaStandard' number}} {{action "selectPrice" (concat 'secondaStandard' number)}} class='pricing-box'>
-                {{price-box price=secondaStandard}}
-              </button>
+              {{price-select-button fare='secondaStandard'
+                                    price=secondaStandard
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'primaStandard' number}} {{action "selectPrice" (concat 'primaStandard' number)}} class='pricing-box'>
-                {{price-box price=primaStandard}}
-              </button>
+              {{price-select-button fare='primaStandard'
+                                    price=primaStandard
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'businessStandard' number}} {{action "selectPrice" (concat 'businessStandard' number)}} class='pricing-box'>
-                {{price-box price=businessStandard}}
-              </button>
+              {{price-select-button fare='businessStandard'
+                                    price=businessStandard
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'clubStandard' number}} {{action "selectPrice" (concat 'clubStandard' number)}} class='pricing-box'>
-                {{price-box price=clubStandard}}
-              </button>
+              {{price-select-button fare='clubStandard'
+                                    price=clubStandard
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
           </tr>
           <tr>
             <td style='text-align: right'>Flex</td>
             <td>
-              <button id={{concat 'secondaFlex' number}} {{action "selectPrice" (concat 'secondaFlex' number)}} class='pricing-box'>
-                {{price-box price=secondaFlex}}
-              </button>
+              {{price-select-button fare='secondaFlex'
+                                    price=secondaFlex
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'primaFlex' number}} {{action "selectPrice" (concat 'primaFlex' number)}} class='pricing-box'>
-                {{price-box price=primaFlex}}
-              </button>
+              {{price-select-button fare='primaFlex'
+                                    price=primaFlex
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'businessFlex' number}} {{action "selectPrice" (concat 'businessFlex' number)}} class='pricing-box'>
-                {{price-box price=businessFlex}}
-              </button>
+              {{price-select-button fare='businessFlex'
+                                    price=businessFlex
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
             <td>
-              <button id={{concat 'clubFlex' number}} {{action "selectPrice" (concat 'clubFlex' number)}} class='pricing-box'>
-                {{price-box price=clubFlex}}
-              </button>
+              {{price-select-button fare='clubFlex'
+                                    price=clubFlex
+                                    number=number
+                                    priceSelected="selectPrice"}}
             </td>
           </tr>
         </table>
