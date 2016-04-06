@@ -1,0 +1,76 @@
+.vertical-selector {
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: 327px;
+    list-style: none;
+
+    li {
+        padding-bottom: 5px;
+    }
+}
+
+.circle {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 6px;
+  margin-right: 11px;
+  z-index: 1;
+  display: inline-block;
+}
+
+.trenitalia {
+  border: solid 4px $trenitalia-blue;
+}
+
+.italotreno {
+  border: solid 4px $italo-red;
+}
+
+.trip-length {
+    font-size: 12px;
+    padding: 10px;
+    color: #7d7f83;
+    margin-right: 20px;
+}
+
+.trenitalia-origin-info::after {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  top: 4px;
+  left: 101px;
+  background: $trenitalia-blue;
+  z-index: 0;
+}
+
+.italotreno-origin-info::after {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  top: 4px;
+  left: 101px;
+  background: $italo-red;
+  z-index: 0;
+}
+
+.origin-time {
+    width: 70px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: $dark-grey;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.train-number {
+    font-family: $small-font;
+    text-transform: capitalize;
+    color: $light-grey;
+    font-size: 12px;
+}

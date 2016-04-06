@@ -21,14 +21,14 @@
       </div>
     </div>
     <div class='col-md-1 button-wrap'>
-        <button {{action "showPrices"}} type="button" class="btn {{if tripIsSelected 'btn-success'}} {{if pricesAreHidden 'btn-primary'}} {{unless pricesAreHidden 'btn-default'}}">Seleziona</button>
+        <button {{action "showPrices"}} type="button" class="btn {{if tripIsSelected 'btn-success'}} {{if pricesAreHidden 'btn-primary'}} {{unless pricesAreHidden 'btn-selected'}}">Seleziona</button>
     </div>
     <div class='col-md-12 {{if pricesAreHidden "hidden"}}'>
       <hr>
     </div>
     <div class='col-md-12 {{if pricesAreHidden "hidden"}}' style='margin-bottom: 15px'>
       <div class='pricing-table' style='width: 70%; float: left'>
-        <table style='padding: 15px'>
+        <table>
           <tr>
             <td></td>
             <td>Seconda</td>

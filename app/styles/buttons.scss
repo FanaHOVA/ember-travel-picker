@@ -1,0 +1,58 @@
+@import 'mixins';
+
+$main-orange: #ff6633;
+$shade-orange: #ff6430;
+$main-blue: #06aeed;
+$shade-blue: #008fc5;
+$main-green: #8cdc31;
+$shade-green: #7ec133;
+$main-grey: #cfcfcf;
+$shade-grey: #c1c1c1;
+
+.btn {
+    font-size: 16px !important;
+    border-radius: 2px;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      outline: 0;
+    }
+
+    &:focus {
+      color: white;
+      outline: 0;
+    }
+}
+
+.btn-selected {
+    color: white;
+    background-color: $main-grey;
+    border: solid 1px $shade-grey;
+    @include box-shadow(0px, 3px, 0px, $shade-grey, true);
+}
+
+.btn-absolute {
+    position: absolute;
+    top: 130px;
+    right: 40px;
+}
+
+.btn-checkout {
+    color: white;
+  	background-color: $main-orange;
+    @include box-shadow(0px, 3px, 0px, $shade-orange);
+}
+
+.btn-primary {
+    border: 0px;
+  	background-color: $main-blue;
+    @include box-shadow(0px, 3px, 0px, $shade-blue);
+}
+
+.btn-success {
+    background-color: $main-green;
+    @include box-shadow(0px, 3px, 0px, $shade-green);
+}

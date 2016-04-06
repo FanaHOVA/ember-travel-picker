@@ -1,0 +1,26 @@
+.fare-price {
+  font-size: 18px;
+  padding-left: 15px;
+  font-family: $price-font;
+  text-align: center;
+  width: 110px;
+
+  p {
+    color: $per-adult;
+    font-size: 12px;
+    padding-left: 15px;
+    margin-top: -8px;
+  }
+}
+
+.minimum-price {
+    font-size: 27px;
+    color: $dark-grey;
+    font-family: $price-font;
+    text-align: center;
+    width: 110px;
+}
+
+.decimal-price {
+  font-size: 18px;
+}

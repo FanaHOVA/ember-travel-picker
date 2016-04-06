@@ -1,6 +1,6 @@
 <div class='fluid-container'>
   <div class='row'>
-    <div class='col-md-8'>
+    <div class='col-md-7'>
       {{#each model as |route|}}
           {{route-display agency=route.agency
                           classes=route.classes
@@ -11,6 +11,7 @@
                           arrivalTime=route.arrivalTime
                           duration=route.duration
                           pickedTrip="setFinalTrip"
+                          previous=activeTrip
                           }}
       {{/each}}
     </div>
@@ -38,16 +39,17 @@
                          number=number}}
           </div>
         </div>
-        <div class='panel-footer'>
-          <div class='row'>
-              <div class='col-sm-7'>
-                {{camel-price price=price}}
-              </div>
-              <div class='col-sm-4'>
-                <button {{action "confirmTrip"}} class='btn btn-checkout'>Continua</button>
-              </div>
+      </div>
+      <div class='row'>
+          <div class='col-sm-4'>
+
           </div>
-        </div>
+          <div class='checkout-col col-sm-2'>
+            {{camel-price price=price}}
+          </div>
+          <div class='checkout-col col-sm-2'>
+            <button class='btn btn-checkout'>Checkout</button>
+          </div>
       </div>
     </div>
   </div>

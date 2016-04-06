@@ -1,46 +1,46 @@
-hr {
-  margin-top: 0px !important; }
+.btn {
+  font-size: 16px !important;
+  border-radius: 2px; }
+  .btn:hover {
+    color: white; }
+  .btn:active {
+    outline: 0; }
+  .btn:focus {
+    color: white;
+    outline: 0; }
 
-.panel {
-  margin: 20px;
-  max-width: 70%;
-  border-radius: 0px; }
-  .panel .heading {
-    background-color: white; }
-  .panel .panel-title {
-    text-transform: uppercase;
-    font-size: 12px; }
-  .panel .checkout-trip-info {
-    margin-left: -50px;
-    margin-top: 10px;
-    padding: 0px !important; }
+.btn-selected {
+  color: white;
+  background-color: #cfcfcf;
+  border: solid 1px #c1c1c1;
+  -webkit-box-shadow: inset 0px 3px 0px #c1c1c1;
+  -moz-box-shadow: inset 0px 3px 0px #c1c1c1;
+  box-shadow: inset 0px 3px 0px #c1c1c1; }
 
-.train-number {
-  font-family: HelveticaNeue;
-  text-transform: capitalize;
-  color: #888888; }
+.btn-absolute {
+  position: absolute;
+  top: 130px;
+  right: 40px; }
 
-.agency-logo {
-  width: 95px;
-  height: 23px; }
+.btn-checkout {
+  color: white;
+  background-color: #ff6633;
+  -webkit-box-shadow: 0px 3px 0px #ff6430;
+  -moz-box-shadow: 0px 3px 0px #ff6430;
+  box-shadow: 0px 3px 0px #ff6430; }
 
-.route-display {
-  width: 748px;
-  min-height: 100px;
-  margin: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  border: solid 1px #cbcbcb; }
-  .route-display .agency-wrap {
-    padding-left: 27px;
-    padding-top: 40px; }
-  .route-display .trip-info-wrap {
-    padding-top: 20px;
-    padding-left: 45px; }
-  .route-display .price-wrap {
-    padding-top: 30px; }
-  .route-display .button-wrap {
-    padding-top: 35px; }
+.btn-primary {
+  border: 0px;
+  background-color: #06aeed;
+  -webkit-box-shadow: 0px 3px 0px #008fc5;
+  -moz-box-shadow: 0px 3px 0px #008fc5;
+  box-shadow: 0px 3px 0px #008fc5; }
+
+.btn-success {
+  background-color: #8cdc31;
+  -webkit-box-shadow: 0px 3px 0px #7ec133;
+  -moz-box-shadow: 0px 3px 0px #7ec133;
+  box-shadow: 0px 3px 0px #7ec133; }
 
 .vertical-selector {
   float: left;
@@ -98,59 +98,15 @@ hr {
   margin-left: 10px;
   text-align: center;
   font-size: 14px;
-  color: #2b333b;
+  color: #333333;
   font-weight: 700;
   margin-right: 8px; }
 
-.fare-price {
-  font-size: 18px;
-  padding-left: 15px;
-  font-family: Oswald-Regular, Helvetica, Arial, sans-serif;
-  text-align: center;
-  width: 110px; }
-  .fare-price p {
-    color: #9b9b9b;
-    font-size: 12px;
-    padding-left: 15px;
-    margin-top: -8px; }
-
-.minimum-price {
-  font-size: 27px;
-  color: #2b333b;
-  font-family: Oswald-Regular, Helvetica, Arial, sans-serif;
-  text-align: center;
-  width: 110px; }
-
-.decimal-price {
-  font-size: 18px; }
-
-.btn-primary {
-  border-radius: 2px;
-  border: 0px;
-  background-color: #06aeed;
-  box-shadow: 0 3px 0 0 #008fc5; }
-
-.btn-success {
-  border-radius: 0px;
-  background-color: #8cdc31 !important;
-  border-color: #8cdc31 !important;
-  -webkit-box-shadow: 0px 3px 0px #7ec133;
-  -moz-box-shadow: 0px 3px 0px #7ec133;
-  box-shadow: 0px 3px 0px #7ec133; }
-
-.btn-default {
-  border-radius: 0px;
-  font-color: white; }
-
-.btn-primary:active,
-.btn-default:active,
-.btn-checkout:active {
-  margin-top: 3px;
-  margin-bottom: -3px;
-  font-color: white; }
-
-.hidden {
-  display: none; }
+.train-number {
+  font-family: HelveticaNeue;
+  text-transform: capitalize;
+  color: #888888;
+  font-size: 12px; }
 
 .pricing-box {
   border: 0px;
@@ -170,26 +126,81 @@ hr {
   background-color: #c4f291;
   text-align: center; }
 
+.fare-price {
+  font-size: 18px;
+  padding-left: 15px;
+  font-family: Oswald-Regular, Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 110px; }
+  .fare-price p {
+    color: #9b9b9b;
+    font-size: 12px;
+    padding-left: 15px;
+    margin-top: -8px; }
+
+.minimum-price {
+  font-size: 27px;
+  color: #333333;
+  font-family: Oswald-Regular, Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 110px; }
+
+.decimal-price {
+  font-size: 18px; }
+
+.route-display {
+  width: 748px;
+  min-height: 100px;
+  margin: 20px;
+  background-color: white;
+  border: solid 1px #cbcbcb;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); }
+  .route-display hr {
+    margin-top: 0px !important; }
+  .route-display .agency-wrap {
+    padding-left: 27px;
+    padding-top: 40px; }
+  .route-display .trip-info-wrap {
+    padding-top: 20px;
+    padding-left: 45px; }
+  .route-display .price-wrap {
+    padding-top: 30px; }
+  .route-display .button-wrap {
+    padding-top: 35px; }
+
 table, th, td {
   border: 0px;
   padding: 5px;
   text-align: center; }
 
 table {
-  border-spacing: 5px; }
+  border-spacing: 5px;
+  padding: 15px; }
 
-.btn {
-  font-size: 16px !important; }
+.panel {
+  margin: 20px;
+  max-width: 70%;
+  border-radius: 0px; }
+  .panel .heading {
+    background-color: white; }
+  .panel .panel-title {
+    text-transform: uppercase;
+    font-size: 12px; }
+  .panel .checkout-trip-info {
+    margin-left: -50px;
+    margin-top: 10px;
+    padding: 0px !important; }
 
-.btn-absolute {
-  position: absolute;
-  top: 130px;
-  right: 40px; }
+.checkout-col {
+  padding-left: 18px; }
 
-.btn-checkout {
-  border-radius: 0px;
-  background-color: #ff6633 !important;
-  border-color: #ff6633 !important;
-  color: white; }
+.agency-logo {
+  width: 95px;
+  height: 23px; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

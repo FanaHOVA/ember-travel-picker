@@ -13,6 +13,8 @@ export default Ember.Controller.extend({
       this.set('arrivalTime', trip['arrivalTime']);
       this.set('logo', trip['logo']);
       this.set('duration', trip['duration']);
+      this.set('agency', trip['agency']);
+      this.set('number', trip['number']);
     }
   }
 });

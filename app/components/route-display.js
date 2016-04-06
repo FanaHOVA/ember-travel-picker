@@ -106,8 +106,11 @@ export default Ember.Component.extend({
           departureTime: this.get('departureTime'),
           arrivalTime: this.get('arrivalTime'),
           duration: this.get('formattedDuration'),
-          price: this.get('wholePrice')
+          price: this.get('wholePrice'),
+          agency: this.get('agency'),
+          number: this.get('number')
         }
+
         this.toggleProperty('pricesAreHidden');
         this.toggleProperty('tripIsSelected');
         this.sendAction('pickedTrip', data);
