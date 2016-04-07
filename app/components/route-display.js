@@ -38,7 +38,7 @@ export default Ember.Component.extend({
                   let amount = parseInt(entry['price']['amount']);
                   if (amount < minimum || minimum == null) {
                       minimum = amount;
-                      _this.set('previousClick', fare);
+                      _this.set('previousClick', '#' + fare + _this.get('number'));
                   }
                   _this.set(fare, entry['price']['amount']);
               } else {
@@ -50,9 +50,8 @@ export default Ember.Component.extend({
     this.set('wholePrice', minimum);
   },
   didInsertElement() {
-      let fare = this.get('previousClick'),
-          number = this.get('number');
-      $('#' + fare + number).addClass('selected-box');
+      let fare = this.get('previousClick')
+      $(fare).addClass('selected-box');
   },
 
   actions: {
